@@ -1,10 +1,8 @@
 package com.ds.designpatternsexamples;
 
-import com.ds.designpatternsexamples.builders.complexObject.Meal;
 import com.ds.designpatternsexamples.builders.complexObject.MealBuilder;
 import com.ds.designpatternsexamples.builders.entity.User;
 import com.ds.designpatternsexamples.chainOfResponsability.ATMDispenserChain;
-import com.ds.designpatternsexamples.chainOfResponsability.Currency;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -25,10 +23,11 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
-
+		User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
+		System.out.println();
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
+		/*
 		Meal vegMeal = mealBuilder.prepareNonVegMeal();
 		vegMeal.showAllItens();
 		System.out.println("Total coast: " + vegMeal.getCost());
@@ -36,5 +35,7 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		Meal chickenMeal = mealBuilder.prepareNonVegMeal();
 		chickenMeal.showAllItens();
 		System.out.println("Total coast: " + chickenMeal.getCost());
+
+		 */
 	}
 }

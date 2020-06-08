@@ -15,10 +15,7 @@ public class User {
         this.phone = builder.phone;
     }
 
-    public User() {
-    }
-
-    public User(String firstName, String lastName) {
+    private User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
