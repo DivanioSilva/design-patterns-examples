@@ -2,6 +2,7 @@ package com.ds.designpatternsexamples;
 
 import com.ds.designpatternsexamples.builders.complexObject.MealBuilder;
 import com.ds.designpatternsexamples.builders.entity.User;
+import com.ds.designpatternsexamples.builders.ownComplectObject.Box;
 import com.ds.designpatternsexamples.chainOfResponsability.ATMDispenserChain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -23,7 +24,9 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
+		//User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
+		Box box = new Box.BoxBuilder().azeitonas(10).pao(2).build();
+		box.print();
 		System.out.println();
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
