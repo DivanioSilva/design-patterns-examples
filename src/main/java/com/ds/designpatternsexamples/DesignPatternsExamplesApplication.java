@@ -3,6 +3,7 @@ package com.ds.designpatternsexamples;
 import com.ds.designpatternsexamples.builders.complexObject.MealBuilder;
 import com.ds.designpatternsexamples.builders.entity.User;
 import com.ds.designpatternsexamples.builders.ownComplectObject.Box;
+import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
 import com.ds.designpatternsexamples.chainOfResponsability.ATMDispenserChain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -28,6 +29,11 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		Box box = new Box.BoxBuilder().azeitonas(10).pao(2).build();
 		box.print();
 		System.out.println();
+
+		Family family = new Family.FamilyBuilder("Divanio", "Arianna", "Marianna").filhoAge(1).maeAge(34).paiAge(38).build();
+
+		System.out.println();
+
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
 		/*
