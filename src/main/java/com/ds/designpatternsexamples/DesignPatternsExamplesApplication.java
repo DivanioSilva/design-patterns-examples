@@ -6,6 +6,8 @@ import com.ds.designpatternsexamples.builders.myOwnBuilder.Person;
 import com.ds.designpatternsexamples.builders.ownComplexObject.Box;
 import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
 import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispenserChain;
+import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.AbstractLogger;
+import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -48,6 +50,14 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		Family familyFactory = this.defaultFactory.family("Arianna", "Annina").filhoAge(1).maeAge(34).build();
 
 		System.out.println();
+
+		AbstractLogger logger = Logger.getChainOfLogger();
+
+		logger.logMessage(AbstractLogger.INFO, "This is an information");
+
+		logger.logMessage(AbstractLogger.DEBUG, "This is a debugger log");
+
+		logger.logMessage(AbstractLogger.ERROR, "This is a disaster log");
 
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 

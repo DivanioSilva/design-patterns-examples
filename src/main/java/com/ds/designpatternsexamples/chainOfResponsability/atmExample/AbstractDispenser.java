@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.chainOfResponsability;
+package com.ds.designpatternsexamples.chainOfResponsability.atmExample;
 
 public abstract class AbstractDispenser implements DispenseChain{
     protected DispenseChain chain;
