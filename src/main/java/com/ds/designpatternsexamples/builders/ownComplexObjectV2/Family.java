@@ -43,10 +43,10 @@ public class Family {
         private Pessoa mae;
         private Filho filho;
 
-        public FamilyBuilder(String paiName, String maeName, String filhoName) {
+        public FamilyBuilder(String maeName, String filhoName) {
             this.filho = new Filho(filhoName);
-            this.pai = new Pai(paiName);
             this.mae = new Mae(maeName);
+            this.pai = new Pai();
         }
 
         public FamilyBuilder filhoAge(Integer age){
@@ -61,6 +61,11 @@ public class Family {
 
         public FamilyBuilder maeAge(Integer age){
             this.mae.setAge(age);
+            return this;
+        }
+
+        public FamilyBuilder paiName(String name){
+            this.pai.setName(name);
             return this;
         }
 

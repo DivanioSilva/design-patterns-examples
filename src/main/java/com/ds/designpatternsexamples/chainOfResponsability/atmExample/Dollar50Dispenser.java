@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.chainOfResponsability;
+package com.ds.designpatternsexamples.chainOfResponsability.atmExample;
 
 import org.springframework.stereotype.Component;
 
