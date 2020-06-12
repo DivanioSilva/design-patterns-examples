@@ -8,6 +8,8 @@ import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
 import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispenserChain;
 import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.AbstractLogger;
 import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.Logger;
+import com.ds.designpatternsexamples.observable.ObservableFactory;
+import com.ds.designpatternsexamples.observable.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -25,6 +27,9 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 	@Autowired
 	private DefaultFactory defaultFactory;
 
+	@Autowired
+	private ObservableFactory observableFactory;
+
 	public static void main(String[] args) {
 		SpringApplication.run(DesignPatternsExamplesApplication.class, args);
 	}
@@ -32,10 +37,15 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		//User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
+		/*
 		Box box = new Box.BoxBuilder().azeitonas(10).pao(2).build();
 		box.print();
 		System.out.println();
 
+
+		 */
+
+		/*
 		Family family = new Family.FamilyBuilder("Arianna", "Marianna")
 				.filhoAge(1).maeAge(34).paiAge(38).paiName("Divanio").build();
 
@@ -50,7 +60,9 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		Family familyFactory = this.defaultFactory.family("Arianna", "Annina").filhoAge(1).maeAge(34).build();
 
 		System.out.println();
+		 */
 
+/*
 		AbstractLogger logger = Logger.getChainOfLogger();
 
 		logger.logMessage(AbstractLogger.INFO, "This is an information");
@@ -59,6 +71,12 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 		logger.logMessage(AbstractLogger.ERROR, "This is a disaster log");
 
+
+ */
+
+		Subject subject = observableFactory.observer();
+
+		subject.setState(8);
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
 		/*
