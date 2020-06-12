@@ -3,7 +3,7 @@ package com.ds.designpatternsexamples.builders.ownComplexObjectV2;
 public abstract class Pessoa {
     private String name;
     private Integer age;
-    protected PersonType type;
+    protected String type;
 
     public Pessoa(String name) {
         this.name = name;
@@ -25,7 +25,7 @@ public abstract class Pessoa {
         this.age = age;
     }
 
-    public PersonType getType() {
+    public String getType() {
         return type;
     }
 

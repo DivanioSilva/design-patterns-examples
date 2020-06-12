@@ -8,6 +8,6 @@ public class Mae extends Pessoa{
 
     @Override
     public void setType() {
-        super.type = PersonType.MAE;
+        super.type = PersonType.MAE.value;
     }
 }

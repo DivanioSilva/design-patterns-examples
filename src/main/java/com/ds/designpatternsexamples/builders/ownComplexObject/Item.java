@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.ownComplectObject;
+package com.ds.designpatternsexamples.builders.ownComplexObject;
 
 public interface Item {
     public String name();

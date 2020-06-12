@@ -1,8 +1,8 @@
 package com.ds.designpatternsexamples;
 
 import com.ds.designpatternsexamples.builders.complexObject.MealBuilder;
-import com.ds.designpatternsexamples.builders.entity.User;
-import com.ds.designpatternsexamples.builders.ownComplectObject.Box;
+import com.ds.designpatternsexamples.builders.myOwnBuilder.Person;
+import com.ds.designpatternsexamples.builders.ownComplexObject.Box;
 import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
 import com.ds.designpatternsexamples.chainOfResponsability.ATMDispenserChain;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,14 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		box.print();
 		System.out.println();
 
-		Family family = new Family.FamilyBuilder("Divanio", "Arianna", "Marianna").filhoAge(1).maeAge(34).paiAge(38).build();
+		Family family = new Family.FamilyBuilder("Divanio", "Arianna", "Marianna")
+				.filhoAge(1).maeAge(34).paiAge(38).build();
+
+		Person pai = new Person.PersonBuilder("Divanio").age(34).apelido("Pai").apelido("Amorzinho").build();
+
+		Person annina = new Person.PersonBuilder("Marianna").apelido("Pequenina").apelido("Tetezinha").apelido("Cocozona").age(1).build();
+
+		Person mae = new Person.PersonBuilder("Arianna").apelido("Amorzinha").apelido("Pequenina").build();
 
 		System.out.println();
 

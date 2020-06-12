@@ -8,6 +8,6 @@ public class Pai extends Pessoa{
 
     @Override
     public void setType() {
-        super.type = PersonType.PAI;
+        super.type = PersonType.PAI.value;
     }
 }

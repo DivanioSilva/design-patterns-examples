@@ -9,6 +9,6 @@ public class Filho extends Pessoa{
 
     @Override
     public void setType() {
-        super.type = PersonType.FILHO;
+        super.type = PersonType.FILHO.value;
     }
 }

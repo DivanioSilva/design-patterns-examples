@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.ownComplectObject;
+package com.ds.designpatternsexamples.builders.ownComplexObject;
 
 import java.util.ArrayList;
 import java.util.List;
