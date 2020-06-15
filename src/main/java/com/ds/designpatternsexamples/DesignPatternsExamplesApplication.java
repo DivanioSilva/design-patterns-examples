@@ -80,7 +80,7 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		subject.setState(8);
 
 		try{
-			throw new DBException.BadExecution("Estou aqui numa exception da DB");
+			throw new DBException.BadExecution();
 		}catch (Exception e){
 			e.printStackTrace();
 		}
