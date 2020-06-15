@@ -8,6 +8,7 @@ import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
 import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispenserChain;
 import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.AbstractLogger;
 import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.Logger;
+import com.ds.designpatternsexamples.exceptions.DBException;
 import com.ds.designpatternsexamples.observable.ObservableFactory;
 import com.ds.designpatternsexamples.observable.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,6 +78,13 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		Subject subject = observableFactory.observer();
 
 		subject.setState(8);
+
+		try{
+			throw new DBException.BadExecution("Estou aqui numa exception da DB");
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
 		/*
