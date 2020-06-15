@@ -8,6 +8,7 @@ import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
 import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispenserChain;
 import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.AbstractLogger;
 import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.Logger;
+import com.ds.designpatternsexamples.exceptions.BaseException;
 import com.ds.designpatternsexamples.exceptions.DBException;
 import com.ds.designpatternsexamples.observable.ObservableFactory;
 import com.ds.designpatternsexamples.observable.Subject;
@@ -15,6 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class DesignPatternsExamplesApplication implements CommandLineRunner {
@@ -79,11 +84,13 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 		subject.setState(8);
 
-		try{
-			throw new DBException.BadExecution();
-		}catch (Exception e){
-			e.printStackTrace();
-		}
+		List<BaseException> exceptions = new ArrayList<>();
+
+		exceptions.add(new DBException.BadExecution());
+		exceptions.add(new DBException.NoData());
+		exceptions.add(new DBException.MoreData());
+		exceptions.add(new DBException.InvalidParam());
+		System.out.println();
 
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
