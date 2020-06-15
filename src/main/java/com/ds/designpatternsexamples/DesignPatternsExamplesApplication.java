@@ -1,13 +1,12 @@
 package com.ds.designpatternsexamples;
 
 import com.ds.designpatternsexamples.builders.DefaultFactory;
+import com.ds.designpatternsexamples.builders.automatic.Carro;
+import com.ds.designpatternsexamples.builders.automatic.CarroBuilder;
+import com.ds.designpatternsexamples.builders.automatic.DefaultBuilder;
+import com.ds.designpatternsexamples.builders.automatic.Porta;
 import com.ds.designpatternsexamples.builders.complexObject.MealBuilder;
-import com.ds.designpatternsexamples.builders.myOwnBuilder.Person;
-import com.ds.designpatternsexamples.builders.ownComplexObject.Box;
-import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
 import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispenserChain;
-import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.AbstractLogger;
-import com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass.Logger;
 import com.ds.designpatternsexamples.exceptions.BaseException;
 import com.ds.designpatternsexamples.exceptions.DBException;
 import com.ds.designpatternsexamples.observable.ObservableFactory;
@@ -18,7 +17,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
@@ -85,6 +83,12 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		subject.setState(8);
 
 		List<BaseException> exceptions = new ArrayList<>();
+
+		Carro carro = new CarroBuilder("MT-43-54").cor("AZUL").build();
+
+		Carro carro1 = Carro.createCarro("MT-DF-DF", "VERMELHO");
+
+		Porta porta = new DefaultBuilder().setFrente(true).createPorta();
 
 		exceptions.add(new DBException.BadExecution());
 		exceptions.add(new DBException.NoData());
