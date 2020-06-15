@@ -11,20 +11,17 @@ public class Carro {
     public Carro() {
     }
 
-    private Carro(String matricula, String cor) {
+    private Carro(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public Carro(String matricula, String cor) {
         this.matricula = matricula;
         this.cor = cor;
     }
 
-    public Carro(List<Roda> rodas, List<Porta> portas, String matricula, String cor) {
-        this.rodas = rodas;
-        this.portas = portas;
-        this.matricula = matricula;
-        this.cor = cor;
-    }
-
-    public static Carro createCarro(String matricula, String cor) {
-        return new Carro(matricula, cor);
+    public static Carro createCarro(String matricula) {
+        return new Carro(matricula);
     }
 
     public List<Roda> getRodas() {

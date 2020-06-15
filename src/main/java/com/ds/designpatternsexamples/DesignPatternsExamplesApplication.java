@@ -3,7 +3,6 @@ package com.ds.designpatternsexamples;
 import com.ds.designpatternsexamples.builders.DefaultFactory;
 import com.ds.designpatternsexamples.builders.automatic.Carro;
 import com.ds.designpatternsexamples.builders.automatic.CarroBuilder;
-import com.ds.designpatternsexamples.builders.automatic.DefaultBuilder;
 import com.ds.designpatternsexamples.builders.automatic.Porta;
 import com.ds.designpatternsexamples.builders.complexObject.MealBuilder;
 import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispenserChain;
@@ -86,9 +85,8 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 		Carro carro = new CarroBuilder("MT-43-54").cor("AZUL").build();
 
-		Carro carro1 = Carro.createCarro("MT-DF-DF", "VERMELHO");
+		Carro carro1 = Carro.createCarro("MT-DF-DF");
 
-		Porta porta = new DefaultBuilder().setFrente(true).createPorta();
 
 		exceptions.add(new DBException.BadExecution());
 		exceptions.add(new DBException.NoData());
