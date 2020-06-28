@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.ownComplexObjectV2;
+package com.ds.designpatternsexamples.objects.familyObject;
 
 public abstract class Pessoa {
     private String name;

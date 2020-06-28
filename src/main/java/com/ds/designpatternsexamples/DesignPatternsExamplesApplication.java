@@ -1,22 +1,17 @@
 package com.ds.designpatternsexamples;
 
-import com.ds.designpatternsexamples.builders.DefaultFactory;
-import com.ds.designpatternsexamples.builders.automatic.Carro;
-import com.ds.designpatternsexamples.builders.automatic.CarroBuilder;
-import com.ds.designpatternsexamples.builders.automatic.Porta;
+import com.ds.designpatternsexamples.builders.ownComplexObjectV2.DefaultFactory;
 import com.ds.designpatternsexamples.builders.complexObject.MealBuilder;
 import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispenserChain;
-import com.ds.designpatternsexamples.exceptions.BaseException;
-import com.ds.designpatternsexamples.exceptions.DBException;
+import com.ds.designpatternsexamples.factories.abstractFactory.withInterfaces.Animal;
+import com.ds.designpatternsexamples.factories.abstractFactory.withInterfaces.FactoryProvider;
+import com.ds.designpatternsexamples.factories.abstractFactory.withInterfaces.Shape;
 import com.ds.designpatternsexamples.observable.ObservableFactory;
-import com.ds.designpatternsexamples.observable.Subject;
+import com.ds.designpatternsexamples.pluralSight.factory.Dictionary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 public class DesignPatternsExamplesApplication implements CommandLineRunner {
@@ -32,6 +27,9 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 	@Autowired
 	private ObservableFactory observableFactory;
+
+	@Autowired
+	private Dictionary d;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DesignPatternsExamplesApplication.class, args);
@@ -76,7 +74,7 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 
  */
-
+/*
 		Subject subject = observableFactory.observer();
 
 		subject.setState(8);
@@ -94,6 +92,9 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		exceptions.add(new DBException.InvalidParam());
 		System.out.println();
 
+
+ */
+
 		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
 		/*
@@ -106,5 +107,29 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		System.out.println("Total coast: " + chickenMeal.getCost());
 
 		 */
+		/*
+		final float addResult = Calculator.calculateUsingFactory(OperationsEnum.ADICAO, 2, 2);
+		final float subResult = Calculator.calculateUsingFactory(OperationsEnum.SUBTRACAO, 3, 5);
+
+		 */
+
+/*
+		Definitions def = d.getDefinitions("car");
+		System.out.println();
+
+ */
+
+		/*
+		Family family = StaticFactory.familyWithMotherAndChild("Arianna", "Marianna");
+		Family fullFamily = StaticFactory.familyWithFatherAndMotherAndChild("Arianna", "Marianna", "Divanio");
+		System.out.println();
+
+		 */
+		Animal duck = (Animal) FactoryProvider.getAbstractFactoryByType("Animal").create("Duck");
+
+		Shape triangle = (Shape) FactoryProvider.getAbstractFactoryByType("Shape").create("Triangle");
+
+		Animal duck1 = (Animal) FactoryProvider.getAbstractFactoryByInterface(Animal.class).create("Duck");
+		System.out.println();
 	}
 }

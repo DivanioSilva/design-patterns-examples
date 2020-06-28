@@ -1,7 +1,7 @@
-package com.ds.designpatternsexamples.builders;
+package com.ds.designpatternsexamples.builders.ownComplexObjectV2;
 
 import com.ds.designpatternsexamples.builders.myOwnBuilder.Person;
-import com.ds.designpatternsexamples.builders.ownComplexObjectV2.Family;
+import com.ds.designpatternsexamples.objects.familyObject.Family;
 import org.springframework.stereotype.Component;
 
 @Component

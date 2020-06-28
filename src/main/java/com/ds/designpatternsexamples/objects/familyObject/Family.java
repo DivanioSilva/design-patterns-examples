@@ -1,11 +1,14 @@
-package com.ds.designpatternsexamples.builders.ownComplexObjectV2;
+package com.ds.designpatternsexamples.objects.familyObject;
 
 public class Family {
     private Pessoa pai;
     private Pessoa mae;
     private Filho filho;
 
-    private Family() {
+    /**
+     * Just to use in a StaticFactory
+     */
+    public Family() {
     }
 
     private Family(FamilyBuilder familyBuilder) {
