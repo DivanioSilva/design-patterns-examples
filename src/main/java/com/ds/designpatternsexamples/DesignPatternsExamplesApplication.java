@@ -108,6 +108,7 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 		 */
 		/*
+		//too many if else solution
 		final float addResult = Calculator.calculateUsingFactory(OperationsEnum.ADICAO, 2, 2);
 		final float subResult = Calculator.calculateUsingFactory(OperationsEnum.SUBTRACAO, 3, 5);
 
@@ -123,13 +124,15 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		Family family = StaticFactory.familyWithMotherAndChild("Arianna", "Marianna");
 		Family fullFamily = StaticFactory.familyWithFatherAndMotherAndChild("Arianna", "Marianna", "Divanio");
 		System.out.println();
-
 		 */
+		/*
+		// Abstract Factory example
+		*/
 		Animal duck = (Animal) FactoryProvider.getAbstractFactoryByType("Animal").create("Duck");
-
 		Shape triangle = (Shape) FactoryProvider.getAbstractFactoryByType("Shape").create("Triangle");
-
 		Animal duck1 = (Animal) FactoryProvider.getAbstractFactoryByInterface(Animal.class).create("Duck");
+		Animal dog = (Animal) FactoryProvider.getAbstractFactoryByInterface(Animal.class).create("Dog");
 		System.out.println();
+
 	}
 }

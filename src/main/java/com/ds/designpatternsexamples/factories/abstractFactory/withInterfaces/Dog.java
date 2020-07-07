@@ -1,6 +1,7 @@
 package com.ds.designpatternsexamples.factories.abstractFactory.withInterfaces;
 
-public class Dog implements Animal {
+public class Dog extends AbstractAnimal implements Animal {
+
     @Override
     public String getAnimal() {
         return "Dog";
@@ -10,4 +11,16 @@ public class Dog implements Animal {
     public String makeSound() {
         return "Au au";
     }
+
+    @Override
+    public void addName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String animalName() {
+        return name;
+    }
+
+
 }
