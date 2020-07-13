@@ -6,12 +6,18 @@ import com.ds.designpatternsexamples.chainOfResponsability.atmExample.ATMDispens
 import com.ds.designpatternsexamples.factories.abstractFactory.withInterfaces.Animal;
 import com.ds.designpatternsexamples.factories.abstractFactory.withInterfaces.FactoryProvider;
 import com.ds.designpatternsexamples.factories.abstractFactory.withInterfaces.Shape;
+import com.ds.designpatternsexamples.lambdas.Reducer;
 import com.ds.designpatternsexamples.observable.ObservableFactory;
 import com.ds.designpatternsexamples.pluralSight.factory.Dictionary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class DesignPatternsExamplesApplication implements CommandLineRunner {
@@ -127,12 +133,12 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		 */
 		/*
 		// Abstract Factory example
-		*/
+
 		Animal duck = (Animal) FactoryProvider.getAbstractFactoryByType("Animal").create("Duck");
 		Shape triangle = (Shape) FactoryProvider.getAbstractFactoryByType("Shape").create("Triangle");
 		Animal duck1 = (Animal) FactoryProvider.getAbstractFactoryByInterface(Animal.class).create("Duck");
 		Animal dog = (Animal) FactoryProvider.getAbstractFactoryByInterface(Animal.class).create("Dog");
 		System.out.println();
-
+		*/
 	}
 }
