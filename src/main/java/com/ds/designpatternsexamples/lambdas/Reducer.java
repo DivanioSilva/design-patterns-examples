@@ -28,4 +28,12 @@ public class Reducer {
         //BigDecimal subResult = Arrays.stream(bigDecimals).reduce(BigDecimal.ZERO, BigDecimal::subtract);
         return result;
     }
+
+    public static BigDecimal multiply(BigDecimal value1, BigDecimal value2) {
+        return value1.multiply(value2);
+    }
+
+    public static BigDecimal division(BigDecimal value1, BigDecimal value2) {
+        return value1.divide(value2);
+    }
 }
