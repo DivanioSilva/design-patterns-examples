@@ -1,6 +1,6 @@
-package com.ds.designpatternsexamples.controller;
+package com.ds.controller;
 
-import com.ds.designpatternsexamples.exceptions.BaseException;
+import com.ds.exceptions.BaseException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

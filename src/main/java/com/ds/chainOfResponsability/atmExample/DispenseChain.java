@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.chainOfResponsability.atmExample;
+package com.ds.chainOfResponsability.atmExample;
 
 public interface DispenseChain {
     void setNextChain(DispenseChain nextChain);

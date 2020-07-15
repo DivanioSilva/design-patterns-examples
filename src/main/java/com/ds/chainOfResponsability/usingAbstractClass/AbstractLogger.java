@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.chainOfResponsability.usingAbstractClass;
+package com.ds.chainOfResponsability.usingAbstractClass;
 
 import java.util.Objects;
 

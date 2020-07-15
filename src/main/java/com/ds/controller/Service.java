@@ -1,6 +1,6 @@
-package com.ds.designpatternsexamples.controller;
+package com.ds.controller;
 
-import com.ds.designpatternsexamples.exceptions.DBException;
+import com.ds.exceptions.DBException;
 
 @org.springframework.stereotype.Service
 public class Service {

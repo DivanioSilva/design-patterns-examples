@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.configurations;
+package com.ds.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

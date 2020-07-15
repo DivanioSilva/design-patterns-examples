@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.automatic;
+package com.ds.builders.automatic;
 
 import java.util.List;
 

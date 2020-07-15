@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.complexObject;
+package com.ds.builders.complexObject;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.config;
+package com.ds.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;

@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.pluralSight.factory;
+package com.ds.pluralSight.factory;
 
 import java.util.List;
 

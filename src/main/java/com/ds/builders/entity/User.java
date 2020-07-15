@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.entity;
+package com.ds.builders.entity;
 
 public class User {
     private String firstName;

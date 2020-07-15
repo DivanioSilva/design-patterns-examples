@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.ownComplexObject;
+package com.ds.builders.ownComplexObject;
 
 public class Pão extends AbstractProduct implements Item{
     private int qtd;

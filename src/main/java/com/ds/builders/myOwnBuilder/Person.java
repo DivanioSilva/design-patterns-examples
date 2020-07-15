@@ -1,4 +1,4 @@
-package com.ds.designpatternsexamples.builders.myOwnBuilder;
+package com.ds.builders.myOwnBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
