@@ -56,6 +56,7 @@ public class Reducer {
         return operation;
     }
 
+    @LogExecutionTime
     public String person(Person person){
         return person.toString();
     }

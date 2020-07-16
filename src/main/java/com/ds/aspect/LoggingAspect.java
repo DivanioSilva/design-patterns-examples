@@ -17,7 +17,7 @@ public class LoggingAspect {
     private static final Logger LOGGER = LogManager.getLogger(LoggingAspect.class);
 
     //AOP expression for which methods shall be intercepted
-    @Around("execution(* com.ds.services..*(..)))")
+    //@Around("execution(* com.ds.services..*(..)))")
     public Object profileAllMethods(ProceedingJoinPoint proceedingJoinPoint) throws Throwable
     {
         MethodSignature methodSignature = (MethodSignature) proceedingJoinPoint.getSignature();
@@ -32,7 +32,6 @@ public class LoggingAspect {
         stopWatch.start();
         Object result = proceedingJoinPoint.proceed();
         stopWatch.stop();
-
         //Log method execution time
         LOGGER.info("Execution time of " + className + "." + methodName + " :: " + stopWatch.getTotalTimeMillis() + " ms");
 
@@ -67,7 +66,7 @@ public class LoggingAspect {
     @Around("@annotation(com.ds.annotations.LogExecutionTime)")
     //@Around("@annotation(com.in28minutes.springboot.tutorial.basics.example.aop.TrackTime)")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
-        LOGGER.info("Custom annotation listener");
+        LOGGER.info("Custom annotation listener in " + joinPoint.getSignature());
 
         final StopWatch stopWatch = new StopWatch();
 
@@ -76,7 +75,7 @@ public class LoggingAspect {
 
         stopWatch.stop();
 
-        LOGGER.info(joinPoint.getSignature() + " executed in " + stopWatch.getTotalTimeMillis() + "ms");
+        LOGGER.info("Executed in " + stopWatch.getTotalTimeMillis() + "ms");
         return proceed;
     }
 }
