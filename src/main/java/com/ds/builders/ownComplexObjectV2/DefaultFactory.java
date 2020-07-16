@@ -1,7 +1,7 @@
 package com.ds.builders.ownComplexObjectV2;
 
 import com.ds.builders.myOwnBuilder.Person;
-import com.ds.objects.familyObject.Family;
+import com.ds.entities.familyObject.Family;
 import org.springframework.stereotype.Component;
 
 @Component

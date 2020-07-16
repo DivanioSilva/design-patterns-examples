@@ -1,4 +1,4 @@
-package com.ds.objects.familyObject;
+package com.ds.entities.familyObject;
 
 public enum PersonType {
     FILHO("filho"), PAI("pai"), MAE("mãe");

@@ -1,6 +1,6 @@
 package com.ds.factories.staticFactory;
 
-import com.ds.objects.familyObject.Family;
+import com.ds.entities.familyObject.Family;
 
 public class StaticFactory {
 

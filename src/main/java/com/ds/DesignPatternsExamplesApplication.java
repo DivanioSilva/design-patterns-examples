@@ -4,7 +4,6 @@ import com.ds.builders.myOwnBuilder.Person;
 import com.ds.chainOfResponsability.atmExample.ATMDispenserChain;
 import com.ds.builders.ownComplexObjectV2.DefaultFactory;
 import com.ds.builders.complexObject.MealBuilder;
-import com.ds.services.EmployeeManager;
 import com.ds.stream.Reducer;
 import com.ds.observable.ObservableFactory;
 import com.ds.pluralSight.factory.Dictionary;
@@ -33,9 +32,6 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 	@Autowired
 	private Dictionary d;
-
-	@Autowired
-	private EmployeeManager employeeManager;
 
 	@Autowired
 	private Reducer reducer;

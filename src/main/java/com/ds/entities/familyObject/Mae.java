@@ -1,4 +1,4 @@
-package com.ds.objects.familyObject;
+package com.ds.entities.familyObject;
 
 public class Mae extends Pessoa{
     public Mae(String name) {

@@ -9,15 +9,14 @@ public class Employee implements Serializable {
     private String firstName;
     private String lastName;
 
-    public Employee() {
+    private Employee() {
         super();
     }
 
-    public Employee(Long id, String firstName, String lastName) {
-        super();
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    private Employee(EmployeeBuilder employeeBuilder) {
+        this.id = employeeBuilder.id;
+        this.firstName = employeeBuilder.firstName;
+        this.lastName = employeeBuilder.lastName;
     }
 
     @Override
@@ -51,5 +50,30 @@ public class Employee implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public static class EmployeeBuilder{
+        private Long id;
+        private String firstName;
+        private String lastName;
+
+        public EmployeeBuilder id(Long id){
+            this.id = id;
+            return this;
+        }
+
+        public EmployeeBuilder firstName(String firstName){
+            this.firstName = firstName;
+            return this;
+        }
+
+        public EmployeeBuilder lastName(String lastName){
+            this.lastName = lastName;
+            return this;
+        }
+
+        public Employee build(){
+            return new Employee(this);
+        }
     }
 }
