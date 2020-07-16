@@ -5,7 +5,6 @@ import com.ds.chainOfResponsability.atmExample.ATMDispenserChain;
 import com.ds.builders.ownComplexObjectV2.DefaultFactory;
 import com.ds.builders.complexObject.MealBuilder;
 import com.ds.services.EmployeeManager;
-import com.ds.stream.AOPTest;
 import com.ds.stream.Reducer;
 import com.ds.observable.ObservableFactory;
 import com.ds.pluralSight.factory.Dictionary;
@@ -16,9 +15,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.math.BigDecimal;
 
+
 @SpringBootApplication
-//@EnableAspectJAutoProxy(proxyTargetClass=true)
-//@EnableAutoConfiguration
 public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 	@Autowired
@@ -38,6 +36,9 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
 	@Autowired
 	private EmployeeManager employeeManager;
+
+	@Autowired
+	private Reducer reducer;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DesignPatternsExamplesApplication.class, args);
@@ -149,10 +150,14 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		BigDecimal response = reducer.justReturn(BigDecimal.TEN);
 		//System.out.println(employeeManager.getEmployeeById(1L));
 */
-		employeeManager.getEmployeeById(1L);
+		//employeeManager.getEmployeeById(1L);
+		//employeeManager.getEmployeeByName("Alex");
+		//AOPTest result = new AOPTest(new Person.PersonBuilder("Divanio").build());
 
-		employeeManager.getEmployeeByName("Alex");
-		AOPTest result = new AOPTest(new Person.PersonBuilder("Divanio").build());
+		//reducer.operationAsString("Divanio Silva");
 
+		reducer.person(new Person.PersonBuilder("Divanio").apelido("Silva").age(32).build());
+
+		reducer.justReturn(BigDecimal.TEN);
 	}
 }
