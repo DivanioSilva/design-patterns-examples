@@ -42,9 +42,6 @@ public class LoggingAspect {
     public void justLog(JoinPoint joinPoint)
     {
 
-        final StopWatch stopWatch = new StopWatch();
-        //Measure method execution time
-        stopWatch.start();
 
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
 
@@ -57,10 +54,8 @@ public class LoggingAspect {
             LOGGER.info("Arg: " + signatureArg);
         }
 
-        stopWatch.stop();
-
         //Log method execution time
-        LOGGER.info("Execution time of " + className + "." + methodName + " :: " + stopWatch.getTotalTimeMillis() + " ms");
+        LOGGER.info("Execution time of " + className + "." + methodName);
     }
 
     @Around("@annotation(com.ds.annotations.LogExecutionTime)")
