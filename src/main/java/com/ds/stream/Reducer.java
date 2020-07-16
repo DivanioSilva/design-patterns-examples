@@ -1,4 +1,4 @@
-package com.ds.lambdas;
+package com.ds.stream;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

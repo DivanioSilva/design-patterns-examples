@@ -14,6 +14,15 @@ public class Person {
          this.apelidos = personBuilder.apelidos;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", apelidos=" + apelidos +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

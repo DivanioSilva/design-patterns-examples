@@ -2,7 +2,7 @@ package com.ds.controller;
 
 import com.ds.exceptions.BaseException;
 import com.ds.exceptions.DBException;
-import com.ds.lambdas.Reducer;
+import com.ds.stream.Reducer;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,7 +1,9 @@
-package com.ds.lambdas;
+package com.ds.stream;
 
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -9,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import java.math.BigDecimal;
 
 @SpringBootTest
+@RunWith(SpringRunner.class)
 class ReducerTest {
 
     @Test

@@ -1,16 +1,17 @@
 package com.ds;
 
+import com.ds.builders.myOwnBuilder.Person;
 import com.ds.chainOfResponsability.atmExample.ATMDispenserChain;
 import com.ds.builders.ownComplexObjectV2.DefaultFactory;
 import com.ds.builders.complexObject.MealBuilder;
 import com.ds.services.EmployeeManager;
-import com.ds.lambdas.Reducer;
+import com.ds.stream.AOPTest;
+import com.ds.stream.Reducer;
 import com.ds.observable.ObservableFactory;
 import com.ds.pluralSight.factory.Dictionary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.math.BigDecimal;
@@ -142,12 +143,16 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		System.out.println();
 		*/
 
+		/* aop tests
 		BigDecimal result = Reducer.sum(BigDecimal.TEN);
-
 		Reducer reducer = new Reducer();
-
 		BigDecimal response = reducer.justReturn(BigDecimal.TEN);
+		//System.out.println(employeeManager.getEmployeeById(1L));
+*/
+		employeeManager.getEmployeeById(1L);
 
-		System.out.println(employeeManager.getEmployeeById(1L));
+		employeeManager.getEmployeeByName("Alex");
+		AOPTest result = new AOPTest(new Person.PersonBuilder("Divanio").build());
+
 	}
 }
