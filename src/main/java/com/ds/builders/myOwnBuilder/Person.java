@@ -1,9 +1,15 @@
 package com.ds.builders.myOwnBuilder;
 
+import com.ds.aspect.LoggingAspect;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
+    private static final Logger LOGGER = LogManager.getLogger(Person.class);
+
     private String name;
     private Integer age;
     private List<String> apelidos;
@@ -68,6 +74,7 @@ public class Person {
         }
 
         public Person build(){
+            LOGGER.info("Vou buildar uma nova pessoa!");
             Person person = new Person(this);
             return person;
         }
