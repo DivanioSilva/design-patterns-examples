@@ -64,7 +64,6 @@ public class LoggingAspect {
     }
 
     @Around("@annotation(com.ds.annotations.LogExecutionTime)")
-    //@Around("@annotation(com.in28minutes.springboot.tutorial.basics.example.aop.TrackTime)")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         LOGGER.info("Custom annotation listener in " + joinPoint.getSignature());
 
