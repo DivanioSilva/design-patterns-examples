@@ -1,4 +1,4 @@
-package com.ds.tooManyIfElseSolution;
+package com.ds.tooManyIfElseSolution.with.factory;
 
 public class Multiplicacao implements Operation{
     @Override

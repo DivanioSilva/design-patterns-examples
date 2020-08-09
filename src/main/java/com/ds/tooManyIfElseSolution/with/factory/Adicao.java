@@ -1,6 +1,6 @@
-package com.ds.tooManyIfElseSolution;
+package com.ds.tooManyIfElseSolution.with.factory;
 
-public class Adicao implements Operation{
+public class Adicao implements Operation {
 
 
     @Override

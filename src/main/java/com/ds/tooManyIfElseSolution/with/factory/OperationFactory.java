@@ -1,4 +1,4 @@
-package com.ds.tooManyIfElseSolution;
+package com.ds.tooManyIfElseSolution.with.factory;
 
 import java.util.HashMap;
 import java.util.Map;

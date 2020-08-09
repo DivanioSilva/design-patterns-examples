@@ -1,4 +1,4 @@
-package com.ds.tooManyIfElseSolution;
+package com.ds.tooManyIfElseSolution.with.factory;
 
 import org.springframework.stereotype.Component;
 
