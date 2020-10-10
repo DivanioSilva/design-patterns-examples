@@ -4,6 +4,7 @@ import com.ds.builders.myOwnBuilder.Person;
 import com.ds.chainOfResponsability.atmExample.ATMDispenserChain;
 import com.ds.builders.ownComplexObjectV2.DefaultFactory;
 import com.ds.builders.complexObject.MealBuilder;
+import com.ds.chainOfResponsability.coffee.PersonChain;
 import com.ds.stream.Reducer;
 import com.ds.observable.ObservableFactory;
 import com.ds.pluralSight.factory.Dictionary;
@@ -152,8 +153,12 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
         //reducer.operationAsString("Divanio Silva");
 
-        reducer.person(new Person.PersonBuilder("Divanio").apelido("Silva").age(32).build());
+        //reducer.person(new Person.PersonBuilder("Divanio").apelido("Silva").age(32).build());
 
-        reducer.justReturn(BigDecimal.TEN);
+        //reducer.justReturn(BigDecimal.TEN);
+
+        PersonChain chain = new PersonChain();
+        Person person = new Person.PersonBuilder("Divanio").age(22).build();
+        chain.getC1().setLogic(person);
     }
 }
