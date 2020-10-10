@@ -15,9 +15,9 @@ public class Person {
     private List<String> apelidos;
 
     public Person(PersonBuilder personBuilder) {
-         this.age = personBuilder.age;
-         this.name = personBuilder.name;
-         this.apelidos = personBuilder.apelidos;
+        this.age = personBuilder.age;
+        this.name = personBuilder.name;
+        this.apelidos = personBuilder.apelidos;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class Person {
         this.apelidos = apelidos;
     }
 
-    public static class PersonBuilder{
+    public static class PersonBuilder {
         private String name;
         private Integer age;
         private List<String> apelidos;
@@ -63,17 +63,17 @@ public class Person {
             this.apelidos = new ArrayList<>();
         }
 
-        public PersonBuilder age(Integer age){
+        public PersonBuilder age(Integer age) {
             this.age = age;
             return this;
         }
 
-        public PersonBuilder apelido(String apelido){
+        public PersonBuilder apelido(String apelido) {
             this.apelidos.add(apelido);
             return this;
         }
 
-        public Person build(){
+        public Person build() {
             LOGGER.info("Vou buildar uma nova pessoa!");
             Person person = new Person(this);
             return person;

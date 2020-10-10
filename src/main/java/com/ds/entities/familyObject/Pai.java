@@ -1,6 +1,6 @@
 package com.ds.entities.familyObject;
 
-public class Pai extends Pessoa{
+public class Pai extends Pessoa {
 
     public Pai() {
         super(null);

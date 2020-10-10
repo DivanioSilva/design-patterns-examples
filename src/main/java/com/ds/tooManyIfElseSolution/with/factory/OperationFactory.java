@@ -14,7 +14,7 @@ public class OperationFactory {
         operations.put(OperationsEnum.SUBTRACAO.getValue(), new Subtracao());
     }
 
-    public static Optional<Operation> getOperation(String operation){
+    public static Optional<Operation> getOperation(String operation) {
         return Optional.ofNullable(operations.get(operation));
     }
 }

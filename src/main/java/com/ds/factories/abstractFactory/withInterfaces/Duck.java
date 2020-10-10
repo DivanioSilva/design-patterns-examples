@@ -1,6 +1,6 @@
 package com.ds.factories.abstractFactory.withInterfaces;
 
-public class Duck extends AbstractAnimal implements Animal{
+public class Duck extends AbstractAnimal implements Animal {
 
     @Override
     public String getAnimal() {

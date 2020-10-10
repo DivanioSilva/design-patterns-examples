@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class WebServiceDefinitionSearch implements DefinitionSearch{
+public class WebServiceDefinitionSearch implements DefinitionSearch {
     //https://api.dictionaryapi.dev/api/v1/entries/es/casa
     private static final String URI = "https://api.dictionaryapi.dev/api/v1/entries/en/";
     private final RestTemplate restTemplate;
@@ -25,7 +25,7 @@ public class WebServiceDefinitionSearch implements DefinitionSearch{
         return responseEntity.getBody();
     }
 
-    public static class ResponseClass{
+    public static class ResponseClass {
         private Definition[] definitions;
 
         public ResponseClass(Definition[] definitions) {

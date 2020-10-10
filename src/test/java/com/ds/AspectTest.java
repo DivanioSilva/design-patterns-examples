@@ -20,7 +20,7 @@ public class AspectTest {
     private Reducer target;
 
     @Test
-    public void aopFirstTest(){
+    public void aopFirstTest() {
         AspectJProxyFactory factory = new AspectJProxyFactory(this.target);
         LoggingAspect aspect = new LoggingAspect();
         factory.addAspect(aspect);

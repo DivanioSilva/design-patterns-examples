@@ -52,27 +52,27 @@ public class Employee implements Serializable {
         this.lastName = lastName;
     }
 
-    public static class EmployeeBuilder{
+    public static class EmployeeBuilder {
         private Long id;
         private String firstName;
         private String lastName;
 
-        public EmployeeBuilder id(Long id){
+        public EmployeeBuilder id(Long id) {
             this.id = id;
             return this;
         }
 
-        public EmployeeBuilder firstName(String firstName){
+        public EmployeeBuilder firstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public EmployeeBuilder lastName(String lastName){
+        public EmployeeBuilder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Employee build(){
+        public Employee build() {
             return new Employee(this);
         }
     }

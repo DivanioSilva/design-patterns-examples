@@ -18,11 +18,11 @@ public abstract class AbstractLogger {
         this.nextLogger = nextLogger;
     }
 
-    public void logMessage(int logLevel, String message){
-        if(this.logLevel == logLevel){
+    public void logMessage(int logLevel, String message) {
+        if (this.logLevel == logLevel) {
             System.out.println(message);
         }
-        if(Objects.nonNull(nextLogger)){
+        if (Objects.nonNull(nextLogger)) {
             nextLogger.logMessage(logLevel, message);
         }
     }

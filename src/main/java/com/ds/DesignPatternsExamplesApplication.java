@@ -18,31 +18,31 @@ import java.math.BigDecimal;
 @SpringBootApplication
 public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
-	@Autowired
-	private ATMDispenserChain atmDispenserChain;
+    @Autowired
+    private ATMDispenserChain atmDispenserChain;
 
-	@Autowired
-	private MealBuilder mealBuilder;
+    @Autowired
+    private MealBuilder mealBuilder;
 
-	@Autowired
-	private DefaultFactory defaultFactory;
+    @Autowired
+    private DefaultFactory defaultFactory;
 
-	@Autowired
-	private ObservableFactory observableFactory;
+    @Autowired
+    private ObservableFactory observableFactory;
 
-	@Autowired
-	private Dictionary d;
+    @Autowired
+    private Dictionary d;
 
-	@Autowired
-	private Reducer reducer;
+    @Autowired
+    private Reducer reducer;
 
-	public static void main(String[] args) {
-		SpringApplication.run(DesignPatternsExamplesApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DesignPatternsExamplesApplication.class, args);
+    }
 
-	@Override
-	public void run(String... args) throws Exception {
-		//User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
+    @Override
+    public void run(String... args) throws Exception {
+        //User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
 		/*
 		Box box = new Box.BoxBuilder().azeitonas(10).pao(2).build();
 		box.print();
@@ -100,7 +100,7 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
  */
 
-		//atmDispenserChain.getDispenserChain().dispense(new Currency(80));
+        //atmDispenserChain.getDispenserChain().dispense(new Currency(80));
 
 		/*
 		Meal vegMeal = mealBuilder.prepareNonVegMeal();
@@ -146,14 +146,14 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 		BigDecimal response = reducer.justReturn(BigDecimal.TEN);
 		//System.out.println(employeeManager.getEmployeeById(1L));
 */
-		//employeeManager.getEmployeeById(1L);
-		//employeeManager.getEmployeeByName("Alex");
-		//AOPTest result = new AOPTest(new Person.PersonBuilder("Divanio").build());
+        //employeeManager.getEmployeeById(1L);
+        //employeeManager.getEmployeeByName("Alex");
+        //AOPTest result = new AOPTest(new Person.PersonBuilder("Divanio").build());
 
-		//reducer.operationAsString("Divanio Silva");
+        //reducer.operationAsString("Divanio Silva");
 
-		reducer.person(new Person.PersonBuilder("Divanio").apelido("Silva").age(32).build());
+        reducer.person(new Person.PersonBuilder("Divanio").apelido("Silva").age(32).build());
 
-		reducer.justReturn(BigDecimal.TEN);
-	}
+        reducer.justReturn(BigDecimal.TEN);
+    }
 }

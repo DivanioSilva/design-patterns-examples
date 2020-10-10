@@ -10,18 +10,18 @@ import java.util.Arrays;
 @Component
 public class Reducer {
 
-    public BigDecimal sum(BigDecimal ... toSum){
+    public BigDecimal sum(BigDecimal... toSum) {
         //BigDecimal sumResult = toSum.stream().reduce(BigDecimal.ONE, BigDecimal::add);
         BigDecimal sumResult = Arrays.stream(toSum).reduce(BigDecimal.ZERO, BigDecimal::add);
         return sumResult;
     }
 
-    public BigDecimal sub(BigDecimal ... bigDecimals){
-        if(bigDecimals.length == 0){
+    public BigDecimal sub(BigDecimal... bigDecimals) {
+        if (bigDecimals.length == 0) {
             return BigDecimal.ZERO;
         }
 
-        if(bigDecimals.length == 1){
+        if (bigDecimals.length == 1) {
             return bigDecimals[0];
         }
 
@@ -35,7 +35,7 @@ public class Reducer {
     }
 
     @LogExecutionTime
-    public BigDecimal justReturn(BigDecimal bigDecimal){
+    public BigDecimal justReturn(BigDecimal bigDecimal) {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -52,12 +52,12 @@ public class Reducer {
         return value1.divide(value2);
     }
 
-    public String operationAsString(String operation){
+    public String operationAsString(String operation) {
         return operation;
     }
 
     @LogExecutionTime
-    public String person(Person person){
+    public String person(Person person) {
         return person.toString();
     }
 }

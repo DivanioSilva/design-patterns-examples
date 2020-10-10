@@ -18,8 +18,7 @@ public class LoggingAspect {
 
     //AOP expression for which methods shall be intercepted
     //@Around("execution(* com.ds.services..*(..)))")
-    public Object profileAllMethods(ProceedingJoinPoint proceedingJoinPoint) throws Throwable
-    {
+    public Object profileAllMethods(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) proceedingJoinPoint.getSignature();
 
         //Get intercepted method details
@@ -39,8 +38,7 @@ public class LoggingAspect {
     }
 
     @Before("execution(* com.ds..*(..)))")
-    public void justLog(JoinPoint joinPoint)
-    {
+    public void justLog(JoinPoint joinPoint) {
 
 
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
@@ -50,7 +48,7 @@ public class LoggingAspect {
         String methodName = methodSignature.getName();
 
         Object[] signatureArgs = joinPoint.getArgs();
-        for (Object signatureArg: signatureArgs) {
+        for (Object signatureArg : signatureArgs) {
             LOGGER.info("Arg: " + signatureArg);
         }
 

@@ -41,7 +41,7 @@ public class Family {
         this.filho = filho;
     }
 
-    public static class FamilyBuilder{
+    public static class FamilyBuilder {
         private Pessoa pai;
         private Pessoa mae;
         private Filho filho;
@@ -52,27 +52,27 @@ public class Family {
             this.pai = new Pai();
         }
 
-        public FamilyBuilder filhoAge(Integer age){
+        public FamilyBuilder filhoAge(Integer age) {
             this.filho.setAge(age);
             return this;
         }
 
-        public FamilyBuilder paiAge(Integer age){
+        public FamilyBuilder paiAge(Integer age) {
             this.pai.setAge(age);
             return this;
         }
 
-        public FamilyBuilder maeAge(Integer age){
+        public FamilyBuilder maeAge(Integer age) {
             this.mae.setAge(age);
             return this;
         }
 
-        public FamilyBuilder paiName(String name){
+        public FamilyBuilder paiName(String name) {
             this.pai.setName(name);
             return this;
         }
 
-        public Family build(){
+        public Family build() {
             Family family = new Family(this);
             return family;
         }

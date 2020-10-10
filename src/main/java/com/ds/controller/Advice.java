@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class Advice extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(value = {BaseException.class})
-    protected Object dbExceptionsHandler(BaseException baseException, WebRequest webRequest){
+    protected Object dbExceptionsHandler(BaseException baseException, WebRequest webRequest) {
         System.out.println("Estou no controller advice");
 
         return handleExceptionInternal(baseException, baseException.getMessage(), new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, webRequest);

@@ -1,6 +1,6 @@
 package com.ds.entities.familyObject;
 
-public class Filho extends Pessoa{
+public class Filho extends Pessoa {
 
     public Filho(String name) {
         super(name);

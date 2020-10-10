@@ -16,7 +16,7 @@ public class Subject {
         notifyAllSubjects();
     }
 
-    public void attach(Observer observer){
+    public void attach(Observer observer) {
         this.observers.add(observer);
     }
 

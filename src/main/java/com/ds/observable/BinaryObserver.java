@@ -1,6 +1,6 @@
 package com.ds.observable;
 
-public class BinaryObserver extends Observer{
+public class BinaryObserver extends Observer {
     public BinaryObserver(Subject subject) {
         super(subject);
         subject.attach(this);
@@ -8,6 +8,6 @@ public class BinaryObserver extends Observer{
 
     @Override
     public void update() {
-        System.out.println( "Binary String: " + Integer.toBinaryString( subject.getState() ) );
+        System.out.println("Binary String: " + Integer.toBinaryString(subject.getState()));
     }
 }

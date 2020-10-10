@@ -1,6 +1,6 @@
 package com.ds.exceptions;
 
-public abstract class BaseException extends Exception{
+public abstract class BaseException extends Exception {
     //Each exception message will be held here
     private String message;
 

@@ -1,6 +1,6 @@
 package com.ds.builders.complexObject;
 
-public class Pepsi extends AbstractColdDrink{
+public class Pepsi extends AbstractColdDrink {
     @Override
     public String name() {
         return "Pepsi";

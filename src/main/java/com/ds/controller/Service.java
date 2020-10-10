@@ -6,6 +6,6 @@ import com.ds.exceptions.DBException;
 public class Service {
 
     public String message() throws DBException.BadExecution {
-            throw  new DBException.BadExecution();
+        throw new DBException.BadExecution();
     }
 }

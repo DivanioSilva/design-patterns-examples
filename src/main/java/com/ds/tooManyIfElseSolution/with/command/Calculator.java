@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 public class Calculator {
 
-    public BigDecimal calculate(Command command){
+    public BigDecimal calculate(Command command) {
         return command.execute();
     }
 }

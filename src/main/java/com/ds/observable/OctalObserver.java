@@ -1,6 +1,6 @@
 package com.ds.observable;
 
-public class OctalObserver extends Observer{
+public class OctalObserver extends Observer {
     public OctalObserver(Subject subject) {
         super(subject);
         subject.attach(this);
@@ -8,6 +8,6 @@ public class OctalObserver extends Observer{
 
     @Override
     public void update() {
-        System.out.println( "Octal String: " + Integer.toOctalString( subject.getState() ) );
+        System.out.println("Octal String: " + Integer.toOctalString(subject.getState()));
     }
 }

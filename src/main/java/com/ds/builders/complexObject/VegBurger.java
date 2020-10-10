@@ -1,6 +1,6 @@
 package com.ds.builders.complexObject;
 
-public class VegBurger extends AbstractBurger{
+public class VegBurger extends AbstractBurger {
     @Override
     public String name() {
         return "Veg Burger";

@@ -1,6 +1,6 @@
 package com.ds.chainOfResponsability.atmExample;
 
-public abstract class AbstractDispenser implements DispenseChain{
+public abstract class AbstractDispenser implements DispenseChain {
     protected DispenseChain chain;
 
     @Override

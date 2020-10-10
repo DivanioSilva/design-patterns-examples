@@ -10,7 +10,7 @@ public class User {
     private User() {
     }
 
-    private User(UserBuilder builder){
+    private User(UserBuilder builder) {
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.age = builder.age;
@@ -63,7 +63,7 @@ public class User {
         this.address = address;
     }
 
-    public static class UserBuilder{
+    public static class UserBuilder {
         private User user;
         private String firstName;
         private String lastName;
@@ -91,7 +91,7 @@ public class User {
             return this;
         }
 
-        public User build(){
+        public User build() {
             User user = new User(this);
             return user;
         }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ObservableFactory {
 
-    public Subject observer(){
+    public Subject observer() {
         Subject subject = new Subject();
         new HexaObserver(subject);
         new OctalObserver(subject);

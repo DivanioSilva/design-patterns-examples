@@ -1,6 +1,6 @@
 package com.ds.builders.ownComplexObject;
 
-public class Pão extends AbstractProduct implements Item{
+public class Pão extends AbstractProduct implements Item {
     private int qtd;
 
     public Pão(int qtd) {

@@ -68,14 +68,14 @@ class ReducerTest {
     }
 
     @Test
-    void multiplyTest(){
+    void multiplyTest() {
         BigDecimal expected = BigDecimal.valueOf(100);
         BigDecimal result = reducer.multiply(BigDecimal.TEN, BigDecimal.TEN);
         assertEquals(expected, result);
     }
 
     @Test
-    void division(){
+    void division() {
         BigDecimal expected = BigDecimal.valueOf(10);
         BigDecimal result = reducer.division(BigDecimal.valueOf(100), BigDecimal.TEN);
         assertEquals(expected, result);
