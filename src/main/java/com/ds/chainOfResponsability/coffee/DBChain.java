@@ -1,8 +1,9 @@
 package com.ds.chainOfResponsability.coffee;
 
 import com.ds.builders.myOwnBuilder.Person;
+import org.springframework.util.StringUtils;
 
-public class DBChain implements LogicalChain{
+public class DBChain implements LogicalChain {
     private LogicalChain chain;
     private Person dbPerson = new Person.PersonBuilder("Divanio").build();
 
@@ -13,9 +14,9 @@ public class DBChain implements LogicalChain{
 
     @Override
     public void setLogic(Person person) {
-        if(dbPerson.equals(person)){
+        if (dbPerson.equals(person)) {
             System.out.println("A pessoa existe na DB");
-        }else{
+        } else {
             System.out.println("A salvar a pessoa na DB");
         }
         this.chain.setLogic(person);

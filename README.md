@@ -1,46 +1,45 @@
 design-patterns-examples
 
-
 Creational Patterns:
-  BUILDER:
+BUILDER:
 
-  FACTORY:
+FACTORY:
 
-  ABSTRACT FACTORY:
+ABSTRACT FACTORY:
 
-  PROTOTYPE:
+PROTOTYPE:
 
 Behavional Patterns:
 
-  OBSERVABLE: 
-  
-  COMMAND:
-  
-  MEDIATOR:
-  
-  STATE:
-  
-  STRATEGY:
-  
-  VISITOR:
-  
-  ITERATOR:
-  
-  MEMENTO:
-  
+OBSERVABLE:
+
+COMMAND:
+
+MEDIATOR:
+
+STATE:
+
+STRATEGY:
+
+VISITOR:
+
+ITERATOR:
+
+MEMENTO:
+
 Structure Patterns:
-  ADAPTER:
-  
-  BRIDGE:
-  
-  COMPOSITE:
-  
-  DECORATOR:
-  
-  FACADE:
-  
-  FLYWAIGHT:
-  
-  PROXY:
-  
+ADAPTER:
+
+BRIDGE:
+
+COMPOSITE:
+
+DECORATOR:
+
+FACADE:
+
+FLYWAIGHT:
+
+PROXY:
+
 Um excelente pattern para construção de excessões:

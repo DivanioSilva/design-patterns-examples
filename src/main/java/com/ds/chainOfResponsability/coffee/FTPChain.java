@@ -2,7 +2,7 @@ package com.ds.chainOfResponsability.coffee;
 
 import com.ds.builders.myOwnBuilder.Person;
 
-public class FTPChain implements LogicalChain{
+public class FTPChain implements LogicalChain {
     private LogicalChain chain;
     private Person person = new Person.PersonBuilder("Divanio").build();
 
@@ -13,9 +13,9 @@ public class FTPChain implements LogicalChain{
 
     @Override
     public void setLogic(Person person) {
-        if(this.person.equals(person)){
+        if (this.person.equals(person)) {
             System.out.println("A pessoa existe na FTP");
-        }else{
+        } else {
             System.out.println("A salvar a pessoa na FTP");
         }
         //this.chain.setLogic(person);
