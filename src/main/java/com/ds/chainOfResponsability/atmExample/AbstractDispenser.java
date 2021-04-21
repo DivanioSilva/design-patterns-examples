@@ -1,10 +1,10 @@
 package com.ds.chainOfResponsability.atmExample;
 
-public abstract class AbstractDispenser implements DispenseChain {
-    protected DispenseChain chain;
+public abstract class AbstractDispenser implements DispenserChain {
+    protected DispenserChain chain;
 
     @Override
-    public void setNextChain(DispenseChain nextChain) {
+    public void setNextChain(DispenserChain nextChain) {
         this.chain = nextChain;
     }
 

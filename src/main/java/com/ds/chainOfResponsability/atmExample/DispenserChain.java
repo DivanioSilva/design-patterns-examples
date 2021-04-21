@@ -1,7 +1,7 @@
 package com.ds.chainOfResponsability.atmExample;
 
-public interface DispenseChain {
-    void setNextChain(DispenseChain nextChain);
+public interface DispenserChain {
+    void setNextChain(DispenserChain nextChain);
 
     void dispense(Currency currency);
 }
