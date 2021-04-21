@@ -12,8 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
+import java.util.Set;
 
 
 @SpringBootApplication
@@ -157,8 +159,11 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
 
         //reducer.justReturn(BigDecimal.TEN);
 
+        /*
         PersonChain chain = new PersonChain();
         Person person = new Person.PersonBuilder("Divanio").age(22).build();
         chain.getC1().setLogic(person);
+
+         */
     }
 }
