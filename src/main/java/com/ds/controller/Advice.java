@@ -1,5 +1,5 @@
 package com.ds.controller;
-
+/*
 import com.ds.exceptions.BaseException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,3 +19,5 @@ public class Advice extends ResponseEntityExceptionHandler {
     }
 
 }
+
+ */
