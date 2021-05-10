@@ -1,13 +1,10 @@
 package com.ds;
 
 import com.ds.aspect.LoggingAspect;
-import com.ds.builders.myOwnBuilder.Person;
+import com.ds.designpattern.builders.myOwnBuilder.Person;
 import com.ds.stream.Reducer;
-import com.ds.utils.LoggerStaticAppender;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

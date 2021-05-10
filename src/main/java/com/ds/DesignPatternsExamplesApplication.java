@@ -1,21 +1,15 @@
 package com.ds;
 
-import com.ds.builders.myOwnBuilder.Person;
-import com.ds.chainOfResponsability.atmExample.ATMDispenserChain;
-import com.ds.builders.ownComplexObjectV2.DefaultFactory;
-import com.ds.builders.complexObject.MealBuilder;
-import com.ds.chainOfResponsability.coffee.PersonChain;
+import com.ds.designpattern.chainOfResponsability.atmExample.ATMDispenserChain;
+import com.ds.designpattern.builders.ownComplexObjectV2.DefaultFactory;
+import com.ds.designpattern.builders.complexObject.MealBuilder;
 import com.ds.stream.Reducer;
-import com.ds.observable.ObservableFactory;
-import com.ds.pluralSight.factory.Dictionary;
+import com.ds.designpattern.observable.ObservableFactory;
+import com.ds.designpattern.factory.Dictionary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.util.StringUtils;
-
-import java.math.BigDecimal;
-import java.util.Set;
 
 
 @SpringBootApplication

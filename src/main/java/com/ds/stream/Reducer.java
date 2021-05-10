@@ -1,7 +1,7 @@
 package com.ds.stream;
 
 import com.ds.annotations.LogExecutionTime;
-import com.ds.builders.myOwnBuilder.Person;
+import com.ds.designpattern.builders.myOwnBuilder.Person;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
