@@ -12,11 +12,11 @@ import java.util.List;
 public class EmployeeService {
 
     public Mono<Employee> findById(Long id){
-        return Mono.just(new Employee.EmployeeBuilder().firstName("Divanio").lastName("Silva").id(id).build());
+        return Mono.just(Employee.builder().firstName("Divanio").lastName("Silva").id(id).build());
     }
 
     public Mono<Employee> create(Employee employee){
-        employee.setId(new Long(199));
+        employee.setId(199L);
         return Mono.just(employee);
     }
 
@@ -24,7 +24,7 @@ public class EmployeeService {
         List<Employee> employees = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             employees.add(
-                    new Employee.EmployeeBuilder().firstName("Divanio").lastName("Silva").id(new Long(i)).build());
+                    Employee.builder().firstName("Divanio").lastName("Silva").id((long) i).build());
         }
         return Flux.fromStream(employees.stream());
     }
