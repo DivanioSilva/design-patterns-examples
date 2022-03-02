@@ -7,8 +7,8 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.List;
 import java.util.Objects;
 
-public class ListValidationChain implements Chain{
-    private Chain nextChain;
+public class ListValidationChain implements Chain<Employee>{
+    private Chain<Employee> nextChain;
 
     @Override
     public void nextChain(Chain nextChain) {

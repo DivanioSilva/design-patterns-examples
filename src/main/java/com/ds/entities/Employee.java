@@ -11,7 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Employee implements Serializable {
+public class Employee extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 5517244812959569947L;
 
     private Long id;
