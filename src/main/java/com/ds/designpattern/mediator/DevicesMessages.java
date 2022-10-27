@@ -1,10 +1,12 @@
 package com.ds.designpattern.mediator;
 
 public enum DevicesMessages {
-    ACC_ON("Switched on air conditioner"),
-    AC_OFF("Switched off air conditioner"),
-    FAN_ON("Switched on fan"),
-    FAN_OFF("Switched OFF fan");
+    ACC_ON("Switched ON air conditioner"),
+    AC_OFF("Switched OFF air conditioner"),
+    FAN_ON("Switched ON fan"),
+    FAN_OFF("Switched OFF fan"),
+    TV_ON("Switched ON TV"),
+    TV_OFF("Switched OFF TV");
 
     private final String value;
 

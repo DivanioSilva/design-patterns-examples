@@ -35,4 +35,16 @@ class RemoveServiceTest {
         String message = remoteService.turnOffFan();
         assertEquals(DevicesMessages.FAN_OFF.getValue(), message);
     }
+
+    @Test
+    void turnOnTV(){
+        String message = remoteService.turnOnTV();
+        assertEquals(DevicesMessages.TV_ON.getValue(), message);
+    }
+
+    @Test
+    void turnOffTV(){
+        String message = remoteService.turnOffTV();
+        assertEquals(DevicesMessages.TV_OFF.getValue(), message);
+    }
 }

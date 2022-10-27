@@ -21,6 +21,6 @@ public class Subject {
     }
 
     private void notifyAllSubjects() {
-        observers.forEach(observer -> observer.update());
+        observers.forEach(Observer::update);
     }
 }

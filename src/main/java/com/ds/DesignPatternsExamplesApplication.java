@@ -30,7 +30,7 @@ public class DesignPatternsExamplesApplication implements CommandLineRunner {
     private ObservableFactory observableFactory;
 
     @Autowired
-    private Dictionary d;
+    private Dictionary dictionary;
 
     @Autowired
     private Reducer reducer;
