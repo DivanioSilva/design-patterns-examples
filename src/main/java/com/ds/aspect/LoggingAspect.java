@@ -1,5 +1,6 @@
 package com.ds.aspect;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
@@ -13,6 +14,7 @@ import org.springframework.util.StopWatch;
 
 @Aspect
 @Component
+@Slf4j
 public class LoggingAspect {
     private static final Logger LOGGER = LogManager.getLogger(LoggingAspect.class);
 
