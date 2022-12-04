@@ -1,9 +1,8 @@
 package com.ds.entities;
 
-import jakarta.persistence.*;
 import lombok.*;
 
-import java.io.Serializable;
+import javax.persistence.*;
 import java.util.Date;
 
 @Getter
@@ -13,7 +12,10 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Employee extends BaseEntity {
+@Table(name = "Employee", indexes = {
+        @Index(name = "idx_employee_id_firstname_unq", columnList = "id, firstName, lastName", unique = true)
+})
+public class Employee extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
@@ -21,5 +23,32 @@ public class Employee extends BaseEntity {
     private static final long serialVersionUID = 5517244812959569947L;
     private String firstName;
     private String lastName;
+
+    private Date createdAt;
+    private Date updatedAt;
+    private Date deletedAt;
+
+    @Version
+    @Column(name = "version")
+    private Integer version;
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        this.updatedAt = new Date();
+    }
+
+    @PreRemove
+    public void preRemove() {
+        this.deletedAt = new Date();
+    }
+
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = new Date();
+    }
 
 }

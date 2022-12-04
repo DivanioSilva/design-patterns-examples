@@ -6,40 +6,27 @@ import com.ds.designpattern.builders.complexObject.MealBuilder;
 import com.ds.stream.Reducer;
 import com.ds.designpattern.observable.ObservableFactory;
 import com.ds.designpattern.factory.Dictionary;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 //import org.springframework.web.reactive.config.EnableWebFlux;
 
 
 @SpringBootApplication
 //@EnableWebFlux
-public class DesignPatternsExamplesApplication implements CommandLineRunner {
+public class DesignPatternsExamplesApplication /*implements CommandLineRunner*/ {
 
-    @Autowired
-    private ATMDispenserChain atmDispenserChain;
-
-    @Autowired
-    private MealBuilder mealBuilder;
-
-    @Autowired
-    private DefaultFactory defaultFactory;
-
-    @Autowired
-    private ObservableFactory observableFactory;
-
-    @Autowired
-    private Dictionary dictionary;
-
-    @Autowired
-    private Reducer reducer;
 
     public static void main(String[] args) {
         SpringApplication.run(DesignPatternsExamplesApplication.class, args);
     }
 
-    @Override
+    //@Override
     public void run(String... args) throws Exception {
         //User user = new User.UserBuilder("Divanio", "Silva").age(39).phone("933096636").address("Tv. Santa Marta, 15").build();
 		/*
