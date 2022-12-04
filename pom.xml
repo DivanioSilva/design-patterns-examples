@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>18</java.version>
+        <java.version>17</java.version>
         <javax.validation.version>2.0.1.Final</javax.validation.version>
         <junit-jupiter.version>5.9.0</junit-jupiter.version>
         <mockito.version>4.6.1</mockito.version>
