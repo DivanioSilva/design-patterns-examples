@@ -1,13 +1,15 @@
 package com.ds.designpattern.builders.myOwnBuilder;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
+@Slf4j
 public class Person {
-    private static final Logger LOGGER = LogManager.getLogger(Person.class);
 
     private String name;
     private Integer age;
@@ -26,9 +28,9 @@ public class Person {
 
         Person person = (Person) o;
 
-        if (name != null ? !name.equals(person.name) : person.name != null) return false;
-        if (age != null ? !age.equals(person.age) : person.age != null) return false;
-        return apelidos != null ? apelidos.equals(person.apelidos) : person.apelidos == null;
+        if (!Objects.equals(name, person.name)) return false;
+        if (!Objects.equals(age, person.age)) return false;
+        return Objects.equals(apelidos, person.apelidos);
     }
 
     @Override
@@ -93,7 +95,7 @@ public class Person {
         }
 
         public Person build() {
-            LOGGER.info("Vou buildar uma nova pessoa!");
+            log.info("Vou buildar uma nova pessoa!");
             Person person = new Person(this);
             return person;
         }
