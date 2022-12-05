@@ -14,6 +14,8 @@ import java.util.Date;
 @Entity
 @Table(name = "Employee", indexes = {
         @Index(name = "idx_employee_id_firstname_unq", columnList = "id, firstName, lastName", unique = true)
+}, uniqueConstraints = {
+        @UniqueConstraint(name = "uc_employee_id_firstname", columnNames = {"id", "firstName", "lastName"})
 })
 public class Employee extends BaseEntity{
     @Id
