@@ -1,12 +1,16 @@
 package com.ds.controller;
 
+import com.ds.dtos.AnimalDto;
 import com.ds.dtos.EmployeeDtoResponse;
 import com.ds.dtos.EmployeeDtoInput;
+import com.ds.entities.Animal;
 import com.ds.entities.Employee;
 import com.ds.entities.EmployeeDtoUpdate;
 import com.ds.exceptions.BaseException;
 import com.ds.exceptions.DBException;
+import com.ds.mappers.AnimalMapper;
 import com.ds.mappers.EmployeeMapper;
+import com.ds.repository.AnimalRepository;
 import com.ds.repository.EmployeeRepository;
 import com.ds.stream.Reducer;
 import org.springframework.http.MediaType;
@@ -14,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.RollbackException;
+import javax.validation.Valid;
 import java.math.BigDecimal;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -24,10 +29,14 @@ public class DefaultController {
 
     private final EmployeeRepository employeeRepository;
     private final EmployeeMapper employeeMapper;
+    private final AnimalMapper animalMapper;
+    private final AnimalRepository animalRepository;
 
-    public DefaultController(EmployeeRepository employeeRepository, EmployeeMapper employeeMapper) {
+    public DefaultController(EmployeeRepository employeeRepository, EmployeeMapper employeeMapper, AnimalMapper animalMapper, AnimalRepository animalRepository) {
         this.employeeRepository = employeeRepository;
         this.employeeMapper = employeeMapper;
+        this.animalMapper = animalMapper;
+        this.animalRepository = animalRepository;
     }
 
     @RequestMapping(value = "v0/test/{value}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -60,7 +69,7 @@ public class DefaultController {
         return response;
     }
 
-    @PostMapping(value = "v1/employee/", produces = MediaType.APPLICATION_JSON_VALUE,
+    @PostMapping(value = "v1/employee", produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public EmployeeDtoResponse save(@RequestBody EmployeeDtoInput employee){
         Employee input = employeeMapper.employeeInputDtoToEmployee(employee);
@@ -69,7 +78,7 @@ public class DefaultController {
     }
 
     @Transactional(rollbackFor = NoSuchElementException.class)
-    @PutMapping(value = "v1/employee/", produces = MediaType.APPLICATION_JSON_VALUE,
+    @PutMapping(value = "v1/employee", produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public EmployeeDtoResponse update(@RequestBody EmployeeDtoUpdate employee){
         Employee input = employeeMapper.employeeDtoUpdateToEmployee(employee);
@@ -77,5 +86,13 @@ public class DefaultController {
         employeeMapper.updateEmployeeFromEmployeeDtoUpdate(employee, onDB);
         Employee savedEmployee = employeeRepository.save(onDB);
         return this.employeeMapper.employeeToEmployeeDtoResponse(savedEmployee);
+    }
+
+    @PostMapping(value = "v1/animals/", produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public AnimalDto save(@Valid @RequestBody AnimalDto animalDto){
+        Animal animal = animalMapper.animalDtoToAnimal(animalDto);
+        Animal save = animalRepository.save(animal);
+        return animalMapper.animalToAnimalDto(save);
     }
 }

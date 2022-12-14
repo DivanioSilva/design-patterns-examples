@@ -17,6 +17,7 @@ import java.util.Date;
 }, uniqueConstraints = {
         @UniqueConstraint(name = "uc_employee_id_firstname", columnNames = {"id", "firstName", "lastName"})
 })
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Employee extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
